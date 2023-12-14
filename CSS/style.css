@@ -1,108 +1,168 @@
-html{
-    scroll-behavior: smooth;
+html {
+  scroll-behavior: smooth;
 }
 
-body{  font-family: "Poppins", serif;
-    height: 100vh;
-    padding: 0;
-    margin: 0;
+body {
+  font-family: "Poppins", serif;
+  height: 100vh;
+  padding: 0;
+  margin: 0;
 }
 
-nav{ position: fixed;
-    width: 100%;
-   height: 50px;
+nav {
+  position: fixed;
+  width: 100%;
+  height: 50px;
 }
 
-.logo{
-color: bisque;
-font-size: 30px;
-font-weight: bold;
-line-height: 80px;
-margin: 0 50px ;
+.logo {
+  color: bisque;
+  font-size: 30px;
+  font-weight: bold;
+  line-height: 80px;
+  margin: 0 50px;
 }
-nav ul{
-    float: right;
-    margin-right: 40px;
+nav ul {
+  float: right;
+  margin-right: 40px;
+}
+nav ul li {
+  display: inline-block;
+  margin-left: 20px;
+  margin-top: 10px;
+}
+nav ul li a {
+  font-size: 25px;
+  color: bisque;
+  text-decoration: none;
+}
+.active {
+  color: darksalmon;
+}
 
-}
-nav ul li{
-    display: inline-block;
-    margin-left: 20px;
-    margin-top: 10px;
-}
- nav ul li a {
-    font-size: 25px;
-    color: bisque;
-    text-decoration: none;
- }
-.active{
-    color: darksalmon;
- }
- 
 nav li a:hover {
-font-weight: lighter;
-color: darksalmon;
- }
+  font-weight: lighter;
+  color: darksalmon;
+}
 
- .active {
-    color:darksalmon; 
-    font-weight: 600;
+.active {
+  color: darksalmon;
+  font-weight: 600;
+}
+
+#logo {
+  float: left;
+  border-radius: 50%;
+  width: 50px;
+  margin: 10px 0 25px 20px;
+}
+.burgerButton {
+  font-size: 30px;
+  float: right;
+  color: teal;
+  margin-right: 40px;
+  line-height: 80px;
+  cursor: pointer;
+  display: none;
+}
+#check {
+  display: none;
+}
+@media (max-width: 900px) {
+  .burgerButton {
+    display: block;
   }
- 
-#logo{ float: left;
-    border-radius: 50%;
-    width: 50px;
-    margin:10px 0 25px 20px;
-}
-.burgerButton{
-    font-size: 30px;
-    float: right;
-    color: teal;
-    margin-right: 40px;
-   line-height: 80px;
-    cursor: pointer;
+  nav ul {
+    position: fixed;
+    width: 100%;
+    background-color: rgb(95, 94, 94);
+    height: 100vh;
+    text-align: center;
+
     display: none;
-}
-#check{ 
-    display: none;
-}
-@media (max-width:900px){
-    .burgerButton{
-        display: block;
-    }
-    nav ul {
-        position: fixed;
-        width: 100%;
-        background-color: rgb(95, 94, 94);
-        height: 100vh;
-        text-align: center;
-      
-      display: none;
-        transition: all 1s;
-    }
-    nav ul li {
-        display: block;
-        padding: 30px 0;
-    }
-    nav ul li a {
-        font-size: 25px;
+    transition: all 1s;
+  }
+  nav ul li {
+    display: block;
+    padding: 30px 0;
+  }
+  nav ul li a {
+    font-size: 25px;
     color: aqua;
-        
-    }
-    #check:checked ~ ul { 
-        transition: ease-in-out 2s;
-      display: contents;
-        top: 60px;
-        -webkit-transition: opacity 0.5s, -webkit-transform 0.5s;
-        transition: opacity 0.5s, transform 0.5s;
--webkit-transform: scale(0.95);
+  }
+  #check:checked ~ ul {
+    transition: ease-in-out 2s;
+    display: contents;
+    top: 60px;
+    -webkit-transition: opacity 0.5s, -webkit-transform 0.5s;
+    transition: opacity 0.5s, transform 0.5s;
+    -webkit-transform: scale(0.95);
     -ms-transform: scale(0.95);
-        transform: scale(0.95);
-  opacity: 0;
-    }
+    transform: scale(0.95);
+    opacity: 0;
+  }
 }
-.spacing{
-    padding: 10%;
-    margin: 40px;
-    box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+.spacing {
+  padding: 10%;
+  margin: 40px;
+}
+ul #skills {
+  margin-right: 50%;
+}
+ul #skills li {
+  text-decoration: none;
+  display: inline-block;
+}
+
+.container {
+  max-width: 1024px;
+  width: 90%;
+  margin: 0 auto;
+}
+.timeline-item {
+  padding: 3em 2em 2em;
+  position: relative;
+  color: rgb(0, 0, 0);
+  border-left: 2px solid rgb(0, 0, 0);
+}
+.timeline-item p {
+  font-size: 1rem;
+}
+.timeline-item::before {
+  content: attr(date-is);
+  position: absolute;
+  left: 2em;
+  font-weight: bold;
+  top: 1em;
+  display: block;
+
+  font-weight: 700;
+  font-size: 0.785rem;
+}
+.timeline-item::after {
+  width: 10px;
+  height: 10px;
+  display: block;
+  top: 0em;
+  position: absolute;
+  left: -7px;
+  border-radius: 10px;
+  content: "";
+  border: 2px solid rgb(0, 0, 0);
+  background: white;
+}
+.timeline-item:first-child {
+  height: 10%;
+  border-image: linear-gradient(
+      to bottom,
+
+      rgb(0, 0, 0) 10%,
+      rgb(0, 0, 0) 100%,
+
+      rgb(4, 4, 4) 200%
+    )
+    1 100%;
+}
+.timeline-item:last-child {
+  border-image: black;
 }
