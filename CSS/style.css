@@ -1,12 +1,16 @@
+html{
+    scroll-behavior: smooth;
+}
+
 body{  font-family: "Poppins", serif;
     height: 100vh;
     padding: 0;
     margin: 0;
 }
 
-nav{
+nav{ position: fixed;
     width: 100%;
-   height: 80px;
+   height: 50px;
 }
 
 .logo{
@@ -31,10 +35,20 @@ nav ul li{
     color: bisque;
     text-decoration: none;
  }
- a.active{
-    text-decoration: underline;
-    color:bisque;
+.active{
+    color: darksalmon;
  }
+ 
+nav li a:hover {
+font-weight: lighter;
+color: darksalmon;
+ }
+
+ .active {
+    color:darksalmon; 
+    font-weight: 600;
+  }
+ 
 #logo{ float: left;
     border-radius: 50%;
     width: 50px;
@@ -79,5 +93,16 @@ nav ul li{
         transition: ease-in-out 2s;
       display: contents;
         top: 60px;
+        -webkit-transition: opacity 0.5s, -webkit-transform 0.5s;
+        transition: opacity 0.5s, transform 0.5s;
+-webkit-transform: scale(0.95);
+    -ms-transform: scale(0.95);
+        transform: scale(0.95);
+  opacity: 0;
     }
+}
+.spacing{
+    padding: 10%;
+    margin: 40px;
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
 }
